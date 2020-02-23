@@ -120,8 +120,8 @@ def hello():
     print('====================================')
     for binding in bindings:
         parent = binding.get_parent()
-        # if parent.get_name() == '':
-        if parent.get_name() is not None:
+        if parent.get_name() == '':
+        # if parent.get_name() is not None:
             print '\tparent_name = {}'.format(parent.get_name())
             print '\tname = {}'.format(binding.get_name())
 
@@ -147,13 +147,13 @@ def hello():
                     channels = section.get_channels()
                     for channel in channels:
                         print '\t\t\t\t\tchannel_name = {}'.format(channel.get_name())
-                        print '\t\t\t\t\tchannel_type = {}'.format(type(channel))
-                        print '\t\t\t\t\tchannel      = {}'.format(channel)
-                        print '\t\t\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+                        # print '\t\t\t\t\tchannel_type = {}'.format(type(channel))
+                        # print '\t\t\t\t\tchannel      = {}'.format(channel)
+                        # print '\t\t\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
                         keys = channel.get_keys()
                         for key in keys:
-                            print '\t\t\t\t\t\tkey       = {}'.format(key)
-                            print '\t\t\t\t\t\tkey_time  = {}'.format(key.get_time())
+                            # print '\t\t\t\t\t\tkey       = {}'.format(key)
+                            # print '\t\t\t\t\t\tkey_time  = {}'.format(key.get_time())
                             print '\t\t\t\t\t\tkey_time  = {} frame'.format(key.get_time().frame_number.value)
                             print '\t\t\t\t\t\tkey_value = {}'.format(key.get_value())
                             print '\t\t\t\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~'
